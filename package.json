@@ -1,0 +1,29 @@
+{
+  "name": "e-portfolio",
+  "version": "1.0.0",
+  "description": "E-portfolio appliction using mongoDB to render and manage content",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomMisson/portfolioJS.git"
+  },
+  "keywords": [
+    "portfolio",
+    "mongoDB",
+    "nodeJS",
+    "express",
+    "React",
+    "Thomas",
+    "Misson",
+    "Tom"
+  ],
+  "author": "Tom Misson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tomMisson/portfolioJS/issues"
+  },
+  "homepage": "https://github.com/tomMisson/portfolioJS#readme"
+}
