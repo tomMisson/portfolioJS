@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/tomMisson/portfolioJS/issues"
   },
-  "homepage": "https://github.com/tomMisson/portfolioJS#readme"
+  "homepage": "https://github.com/tomMisson/portfolioJS#readme",
+  "dependencies": {
+    "mongodb": "^3.2.3"
+  }
 }
