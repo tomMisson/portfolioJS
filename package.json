@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/tomMisson/portfolioJS#readme",
   "dependencies": {
+    "esm": "^3.2.22",
     "mongodb": "^3.2.3"
   }
 }
