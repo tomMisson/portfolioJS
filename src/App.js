@@ -6,6 +6,14 @@ import SideDraw from './Components/Navbar/SideDrawer/SideDrawer';
 import Backdrop from './Components/Backdrop/Backdrop';
 import Jumbotron from './Components/Jumbotron/Jumbotron';
 import Footer from './Components/Footer/Footer';
+import Email from './Media/Social/email.png';
+import Github from './Media/Social/github.png';
+import LinkedIn from "./Media/Social/linkedin.png";
+import Twitter from'./Media/Social/twitter.png';
+import Snapchat from "./Media/Social/snapchat.png";
+import Instagram from "./Media/Social/instagram.png";
+import JumboBG from './Media/Jumbotron/Background.jpg';
+import ProfilePic from './Media/Jumbotron/profile.jpg';
 
 class App extends React.Component {
 
@@ -43,13 +51,18 @@ class App extends React.Component {
       {id:4,pageName:"Contact",directory:"/contact"}
     ],
     externallinks:[
-      {id:1, pageName:"Email",directory:"/contact", image:"./Media/Social/email.png"},
-      {id:2, pageName:"Github",directory:"https://github.com/tomMisson", image:"./Media/Social/github.png"},
-      {id:3, pageName:"LinkedIn",directory:"https://www.linkedin.com/in/thomasmisson/", image:"./Media/Social/linkedin.png"},
-      {id:4, pageName:"Twitter",directory:"https://twitter.com/thomasmisson", image:"./Media/Social/twitter.png"},
-      {id:5, pageName:"Snapchat",directory:"https://www.snapchat.com/add/tommisson", image:"./Media/Social/snapchat.png"},
-      {id:6, pageName:"Instagram",directory:"https://www.instagram.com/tommisson/", image:"./Media/Social/instagram.png"},
-    ]
+      {id:1, pageName:"Email",directory:"/contact", image:Email},
+      {id:2, pageName:"Github",directory:"https://github.com/tomMisson", image:Github},
+      {id:3, pageName:"LinkedIn",directory:"https://www.linkedin.com/in/thomasmisson/", image:LinkedIn},
+      {id:4, pageName:"Twitter",directory:"https://twitter.com/thomasmisson", image:Twitter},
+      {id:5, pageName:"Snapchat",directory:"https://www.snapchat.com/add/tommisson", image:Snapchat},
+      {id:6, pageName:"Instagram",directory:"https://www.instagram.com/tommisson/", image:Instagram},
+    ],
+    jumbotron:{
+      background:JumboBG,
+      avatar:ProfilePic,
+      tagline: "FULL STACK DEVELOPER TAUGHT THROUGH PASSION AND COMMITMENT."
+    }
   }
 
   drawToggleClickHandler = () =>{
@@ -75,11 +88,11 @@ class App extends React.Component {
         {backdrop}
 
         <main>
-          <Jumbotron />
+          <Jumbotron information={this.state.jumbotron}/>
 
           
-          <Footer show ={this.state.sideDrawerOpen} outlinks={this.state.externallinks} inlinks={this.state.internallinks}/>
         </main>
+        <Footer show ={this.state.sideDrawerOpen} outlinks={this.state.externallinks} inlinks={this.state.internallinks}/>
         {/*Qualifcations view
           <ul>
             <Qualifications qualifications={this.state.qualifications}/>

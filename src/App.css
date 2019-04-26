@@ -5,6 +5,21 @@
   margin: 0;
 }
 
+h1{
+  letter-spacing: 5px;
+  font-weight: 100;
+  font-size: 3rem;
+  text-align: center;
+
+}
+
+h3{
+  font-family:'Courier New', sans-serif;
+  letter-spacing: 2px;
+  font-weight: 300;
+  text-align: center;
+}
+
 body{
   font-family: 'Titillium Web', sans-serif;
   line-height: 1.4;
@@ -106,7 +121,7 @@ li {
   width: 70%;
   max-width: 400px;
   z-index: 200;
-  transform: translateX(-100%);
+  transform: translateX(-105%);
   transition: transform 0.3s ease-out;
 }
 
@@ -151,11 +166,10 @@ li {
 
 main{
   margin-top: 60px;
-  margin-left: 15px;
 }
 
 footer{
-  position: fixed;
+  position: relative;
   bottom: 0;
   left:0;
   width: 100%;
@@ -182,7 +196,7 @@ footer{
 
 .social{
   background-color: #333;
-  padding: 20px;
+  padding: 20px 5px;
 }
 
 .social ul{
@@ -193,6 +207,25 @@ footer{
   padding: 0, 0.5rem;
   display: inline;
   margin: 10px;
+}
+
+.jumbotron-container{
+  background-image: url(./Media/Jumbotron/Background.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.avatar{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding:20px;
+}
+
+.information-collection{
+  padding:12%;
 }
 
 @media(max-width:768px){
@@ -214,3 +247,7 @@ footer{
     margin-left: 0rem;
   }
 }
+
+::-webkit-scrollbar { 
+  display: none; 
+} 
