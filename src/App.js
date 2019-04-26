@@ -6,6 +6,8 @@ import SideDraw from './Components/Navbar/SideDrawer/SideDrawer';
 import Backdrop from './Components/Backdrop/Backdrop';
 import Jumbotron from './Components/Jumbotron/Jumbotron';
 import Footer from './Components/Footer/Footer';
+import InfoPanel from './Components/Panel/InfoPanel';
+
 import Email from './Media/Social/email.png';
 import Github from './Media/Social/github.png';
 import LinkedIn from "./Media/Social/linkedin.png";
@@ -14,6 +16,7 @@ import Snapchat from "./Media/Social/snapchat.png";
 import Instagram from "./Media/Social/instagram.png";
 import JumboBG from './Media/Jumbotron/Background.jpg';
 import ProfilePic from './Media/Jumbotron/profile.jpg';
+import ProjectPanel from './Components/Panel/ProjectPanel';
 
 class App extends React.Component {
 
@@ -43,7 +46,6 @@ class App extends React.Component {
       {"_id":{"$oid":"5cb9cee80f1dc12d7044f718"},"Name":"Digital Living","Status":"In progress","Description":"By being inspired by the idea of futuristic home's where everything can be controlled through your voice or a pad on the wall, I am always looking at ways to change, control, makeover and enjoy living in the future as more IOT devices are released!","Tags":["Smartthings","Hue","Spotify","Chromecast","Raspberry Pi","Sensors"],"Language":["Python","HTML","CSS","JS"]},
       {"_id":{"$oid":"5cb9dfb5ae584e2d702e0ade"},"Name":"E-portfolio re-model","Status":"In progress","Description":"Re-working my original E-portfolio to be able to pull documents from a NoSQL database and render out content from them.","Tags":["Web apps","Personal","E-portfolio"],"Language":["JS"]}      
     ],
-    sideDrawerOpen: false,
     internallinks:[
       {id:1, pageName:"Codebase",directory:"/code"},
       {id:2,pageName:"Qualifications",directory:"/qualifications"},
@@ -62,7 +64,9 @@ class App extends React.Component {
       background:JumboBG,
       avatar:ProfilePic,
       tagline: "FULL STACK DEVELOPER TAUGHT THROUGH PASSION AND COMMITMENT."
-    }
+    },
+    sideDrawerOpen: false,
+    statement:"The ability to change the way that people interact with data and technology led me to pursue Software Engineering as a field of study and eventual career. My aim is to be able to produce software at any point within the stack in my work life and at home, live in an environment surrounded and controlled by tech.",
   }
 
   drawToggleClickHandler = () =>{
@@ -89,9 +93,11 @@ class App extends React.Component {
 
         <main>
           <Jumbotron information={this.state.jumbotron}/>
-
-          
+          <InfoPanel statement={this.state.statement}/>
+          <ProjectPanel projectsList={this.state.projects}/>
         </main>
+
+
         <Footer show ={this.state.sideDrawerOpen} outlinks={this.state.externallinks} inlinks={this.state.internallinks}/>
         {/*Qualifcations view
           <ul>

@@ -8,7 +8,7 @@ export default class Footer extends Component {
             <ul>
                 {
                     this.props.outlinks.map((link) => (
-                    <li key={link.id}><a href={link.directory} ><img src={link.image} alt="Social network" height="50" width="50"/></a></li> 
+                    <li key={link.id}><a href={link.directory} ><img src={link.image} alt="Social network" height="45" width="45"/></a></li> 
                     ))
                 }
             </ul>
@@ -21,8 +21,8 @@ export default class Footer extends Component {
                 ))
                 }
             </ul>
+            <p>&copy; - Tom Misson {new Date().getFullYear()}</p>
           </div>
-          <p></p>
       </footer>
     )
   }

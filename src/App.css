@@ -8,9 +8,16 @@
 h1{
   letter-spacing: 5px;
   font-weight: 100;
-  font-size: 3rem;
+  font-size: 4h;
   text-align: center;
 
+}
+
+h2{
+  font-family:'Courier New', sans-serif;
+  letter-spacing: 3px;
+  font-weight: 100;
+  font-size: 1.7rem;
 }
 
 h3{
@@ -29,9 +36,28 @@ body{
   width:100%;
 }
 
+ .links p{
+  text-align: center;
+  padding-top: 15px;
+}
+
 a{
   color: #fff;
   text-decoration: none;
+  cursor: pointer;
+}
+
+button{
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  font-family:'Courier New', sans-serif;
+  letter-spacing: 2px;
+  font-weight: 300;
+  text-align: center;
+  font-size: 1.5rem;
 }
 
 li {
@@ -164,10 +190,6 @@ li {
   transform: translateX(0);
 }
 
-main{
-  margin-top: 60px;
-}
-
 footer{
   position: relative;
   bottom: 0;
@@ -206,7 +228,7 @@ footer{
 .social li{
   padding: 0, 0.5rem;
   display: inline;
-  margin: 10px;
+  margin: 5px;
 }
 
 .jumbotron-container{
@@ -225,7 +247,56 @@ footer{
 }
 
 .information-collection{
-  padding:12%;
+  padding:15%;
+  font-size: 2.5vh;
+}
+
+.dark-panel{
+  margin: 60px;
+  width: 80%;
+  
+}
+
+.light-panel{
+  width: 100%;
+  background-color: #fff;
+  color: #333;
+}
+
+.dark-panel p {
+  font-weight: 200;
+}
+
+.bulletList ul{
+  margin-left:20px;
+  list-style: square;
+}
+
+.bulletList ul ul{
+  margin-left:40px;
+  list-style: disc; 
+}
+
+.light-panel-container{
+  padding:60px;
+}
+
+table{
+  overflow-x: auto;
+}
+
+th{
+  border-bottom: 1px #191919 solid ;
+  padding:15px 30px;
+}
+
+tr,td{
+  padding:5px;
+  margin:5px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2
 }
 
 @media(max-width:768px){
@@ -233,8 +304,12 @@ footer{
   { 
     display: none;
   }
-  footer{
+  footer .links{
     display: none;
+  }
+
+  h1{
+    display:none;
   }
 }
 
