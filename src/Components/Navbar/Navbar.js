@@ -17,10 +17,11 @@ export default class Navbar extends React.Component {
                 <div className="spacer"></div>
                 <div className = "toolbar_navigation_items">
                     <ul>
-                        <li><a href="/">Codebase</a></li>
-                        <li><a href="/">Qualifications</a></li>
-                        <li><a href="/">Photography</a></li>
-                        <li><a href="/">Contact</a></li>
+                        {
+                            this.props.links.map((link) => (
+                                <li key={link.id}><a href={link.directory} >{link.pageName}</a></li>
+                            ))
+                        }
                     </ul>
                 </div>
             </nav>

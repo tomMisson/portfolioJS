@@ -10,10 +10,11 @@ export default class SideDrawer extends Component {
     return (
       <nav className={drawerClasses}>
           <ul>
-                <li><a href="/">Codebase</a></li>
-                <li><a href="/">Qualifications</a></li>
-                <li><a href="/">Photography</a></li>
-                <li><a href="/">Contact</a></li>
+          {
+            this.props.links.map((link) => (
+              <li key={link.id}><a href={link.directory} >{link.pageName}</a></li>
+            ))
+          }
           </ul>
       </nav>
     )

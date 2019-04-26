@@ -1,9 +1,11 @@
 import React from 'react';
 import './App.css';
-import Qualifications from './Components/Qualifications';
+import Qualifications from './Components/Qualifications/Qualifications';
 import Navbar from './Components/Navbar/Navbar';
 import SideDraw from './Components/Navbar/SideDrawer/SideDrawer';
 import Backdrop from './Components/Backdrop/Backdrop';
+import Jumbotron from './Components/Jumbotron/Jumbotron';
+import Footer from './Components/Footer/Footer';
 
 class App extends React.Component {
 
@@ -34,6 +36,20 @@ class App extends React.Component {
       {"_id":{"$oid":"5cb9dfb5ae584e2d702e0ade"},"Name":"E-portfolio re-model","Status":"In progress","Description":"Re-working my original E-portfolio to be able to pull documents from a NoSQL database and render out content from them.","Tags":["Web apps","Personal","E-portfolio"],"Language":["JS"]}      
     ],
     sideDrawerOpen: false,
+    internallinks:[
+      {id:1, pageName:"Codebase",directory:"/code"},
+      {id:2,pageName:"Qualifications",directory:"/qualifications"},
+      {id:3,pageName:"Photography",directory:"/photos"},
+      {id:4,pageName:"Contact",directory:"/contact"}
+    ],
+    externallinks:[
+      {id:1, pageName:"Email",directory:"/contact", image:"./Media/Social/email.png"},
+      {id:2, pageName:"Github",directory:"https://github.com/tomMisson", image:"./Media/Social/github.png"},
+      {id:3, pageName:"LinkedIn",directory:"https://www.linkedin.com/in/thomasmisson/", image:"./Media/Social/linkedin.png"},
+      {id:4, pageName:"Twitter",directory:"https://twitter.com/thomasmisson", image:"./Media/Social/twitter.png"},
+      {id:5, pageName:"Snapchat",directory:"https://www.snapchat.com/add/tommisson", image:"./Media/Social/snapchat.png"},
+      {id:6, pageName:"Instagram",directory:"https://www.instagram.com/tommisson/", image:"./Media/Social/instagram.png"},
+    ]
   }
 
   drawToggleClickHandler = () =>{
@@ -42,8 +58,7 @@ class App extends React.Component {
 
   backdropClickHandler = () => {
     this.setState({sideDrawerOpen:false});
-  };
-
+  };    
 
   render(){
     let backdrop;
@@ -52,19 +67,23 @@ class App extends React.Component {
       backdrop = <Backdrop click={this.backdropClickHandler}/>
     }
 
+
     return (
       <div className="App" style = {{height:"100%"}}>
-        <Navbar drawerClickHandler={this.drawToggleClickHandler}/>
-        <SideDraw show ={this.state.sideDrawerOpen}/>;
+        <Navbar drawerClickHandler={this.drawToggleClickHandler} links={this.state.internallinks}/>
+        <SideDraw show ={this.state.sideDrawerOpen} links={this.state.internallinks}/>
         {backdrop}
 
-
         <main>
-          <p>Page content </p>
+          <Jumbotron />
+
+          
+          <Footer show ={this.state.sideDrawerOpen} outlinks={this.state.externallinks} inlinks={this.state.internallinks}/>
+        </main>
+        {/*Qualifcations view
           <ul>
             <Qualifications qualifications={this.state.qualifications}/>
-          </ul>
-        </main>
+          </ul>*/}
       </div>
     );
   }
