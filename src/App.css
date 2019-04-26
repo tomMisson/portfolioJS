@@ -1,33 +1,166 @@
-.App {
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  font-family: 'Titillium Web', sans-serif;
+  line-height: 1.4;
+  background-color:#212529;
+  height: 100%;
+  width:100%;
+}
+
+a{
+  color: #333;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: disk;
+}
+
+.toolbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background:#fff;
+  height:60px;
+}
+
+.toolbar_logo a{
+  color: #212529;
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  letter-spacing: 2px;
+}
+
+.toolbar_nav{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 1rem
+}
+
+.spacer{
+  flex: 1;
+}
+
+.toolbar_navigation_items a{
+  text-decoration: none; 
+}
+
+.toolbar_navigation_items ul{
+  display: flex;
+}
+
+.toolbar_navigation_items li{
+  padding: 0 0.5rem;
+  list-style-type: none;
+}
+
+.toolbar_navigation_items a:hover
+,.toolbar_navigation_items a:active{
+  color: rgb(15, 189, 102);
+}
+
+.toggle_button{
+  height: 25px;
+  width: 36px;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  box-sizing: border-box;
+  justify-content: space-around;
+}
+
+.toggle_button:focus{
+  outline: none
+}
+
+.toggle_button_line{
+  width: 30px;
+  height: 2px;
+  background:#212529;
+}
+
+.sideDraw{
+  height: 100%;
+  background: #fff;
+  box-shadow: 2px 0px 5px rgba(0,0,0,0.5);
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 70%;
+  max-width: 400px;
+  z-index: 200;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-out;
+}
+
+.sideDraw ul{
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.4rem;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.sideDraw a{
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.sideDraw a:hover,
+.sideDraw a:active{
+  color: rgb(15, 189, 102);
 }
 
-.App-link {
-  color: #61dafb;
+.sideDraw li{
+  margin: 0.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.backdrop{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 100;
+  top:0;
+  left:0;
+}
+
+.sideDraw.open{
+  transform: translateX(0);
+}
+
+main{
+  margin-top: 60px;
+  margin-left: 15px;
+}
+
+@media(max-width:768px){
+  .toolbar_navigation_items
+  { 
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media(min-width:769px){
+  .toolbar_toggle_button{
+    display: none;
+  }
+
+  .toolbar_logo{
+    margin-left: 0rem;
   }
 }
