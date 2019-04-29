@@ -9,6 +9,7 @@ export default class ProjectPanel extends React.Component {
           <h2>MY PROJECTS</h2>
           <br/>
           <table>
+            <thead>
             <tr>
               <th>Name</th>
               <th>Status</th>
@@ -16,6 +17,8 @@ export default class ProjectPanel extends React.Component {
               <th>Tags</th>
               <th>Language</th>
             </tr>
+            </thead>
+            <tbody>
             {
                 this.props.projectsList.map((project) => (
                     <tr key={project._id.$oid}>
@@ -27,6 +30,7 @@ export default class ProjectPanel extends React.Component {
                     </tr>
                 ))
             }
+            </tbody>
           </table>
         
             <br/><br/>

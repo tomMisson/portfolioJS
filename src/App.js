@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Qualifications from './Components/Qualifications/Qualifications';
+//import Qualifications from './Components/Qualifications/Qualifications';
 import Navbar from './Components/Navbar/Navbar';
 import SideDraw from './Components/Navbar/SideDrawer/SideDrawer';
 import Backdrop from './Components/Backdrop/Backdrop';
@@ -50,7 +50,7 @@ class App extends React.Component {
       {id:1, pageName:"Codebase",directory:"/code"},
       {id:2,pageName:"Qualifications",directory:"/qualifications"},
       {id:3,pageName:"Photography",directory:"/photos"},
-      {id:4,pageName:"Contact",directory:"/contact"}
+      {id:4,pageName:"Contact",directory:"/contact"},
     ],
     externallinks:[
       {id:1, pageName:"Email",directory:"/contact", image:Email},
@@ -63,7 +63,7 @@ class App extends React.Component {
     jumbotron:{
       background:JumboBG,
       avatar:ProfilePic,
-      tagline: "FULL STACK DEVELOPER TAUGHT THROUGH PASSION AND COMMITMENT."
+      tagline: "FULL STACK DEVELOPER & AMATEUR PHOTOGRAPHER TAUGHT THROUGH PASSION, COMMITMENT & A LOT OF FUN"
     },
     sideDrawerOpen: false,
     statement:"The ability to change the way that people interact with data and technology led me to pursue Software Engineering as a field of study and eventual career. My aim is to be able to produce software at any point within the stack in my work life and at home, live in an environment surrounded and controlled by tech.",

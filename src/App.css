@@ -282,7 +282,11 @@ footer{
 }
 
 table{
-  overflow-x: auto;
+  width: 100% !important;
+  border-collapse: collapse;
+  overflow-x: scroll;
+  display: block;
+  width: fit-content;
 }
 
 th{
