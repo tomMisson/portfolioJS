@@ -1,12 +1,16 @@
 import React from 'react';
 import './App.css';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 //import Qualifications from './Components/Qualifications/Qualifications';
+
+import home from './Components/Pages/Home';
+import code from './Components/Pages/Code';
+import error from './Components/Pages/Error';
+
 import Navbar from './Components/Navbar/Navbar';
 import SideDraw from './Components/Navbar/SideDrawer/SideDrawer';
 import Backdrop from './Components/Backdrop/Backdrop';
-import Jumbotron from './Components/Jumbotron/Jumbotron';
 import Footer from './Components/Footer/Footer';
-import InfoPanel from './Components/Panel/InfoPanel';
 
 import Email from './Media/Social/email.png';
 import Github from './Media/Social/github.png';
@@ -14,9 +18,7 @@ import LinkedIn from "./Media/Social/linkedin.png";
 import Twitter from'./Media/Social/twitter.png';
 import Snapchat from "./Media/Social/snapchat.png";
 import Instagram from "./Media/Social/instagram.png";
-import JumboBG from './Media/Jumbotron/Background.jpg';
-import ProfilePic from './Media/Jumbotron/profile.jpg';
-import ProjectPanel from './Components/Panel/ProjectPanel';
+
 
 class App extends React.Component {
 
@@ -42,10 +44,6 @@ class App extends React.Component {
         {"_id":{"$oid":"5cb8fd7b01df3b1e2c3eec30"},"Course":"First aid training","Type":"Accreditation","Issuer":"St John Ambulance","Issue date":{"$date":{"$numberLong":"1470178800000"}},"Expiry date":{"$date":{"$numberLong":"1564700400000"}},"Delegate number":"5699626","Certificate number":"1600242538"},
         {"_id":{"$oid":"5cb901d18b3957274c11bbd7"},"Course":"Fundamentals of Digital Marketing","Type":"Accreditation","Issuer":"Open university & Google","Issue date":{"$date":{"$numberLong":"1547938800000"}},"Certificate number":"7KB 6RC HDV"}
     ],
-    projects:[
-      {"_id":{"$oid":"5cb9cee80f1dc12d7044f718"},"Name":"Digital Living","Status":"In progress","Description":"By being inspired by the idea of futuristic home's where everything can be controlled through your voice or a pad on the wall, I am always looking at ways to change, control, makeover and enjoy living in the future as more IOT devices are released!","Tags":["Smartthings","Hue","Spotify","Chromecast","Raspberry Pi","Sensors"],"Language":["Python","HTML","CSS","JS"]},
-      {"_id":{"$oid":"5cb9dfb5ae584e2d702e0ade"},"Name":"E-portfolio re-model","Status":"In progress","Description":"Re-working my original E-portfolio to be able to pull documents from a NoSQL database and render out content from them.","Tags":["Web apps","Personal","E-portfolio"],"Language":["JS"]}      
-    ],
     internallinks:[
       {id:1, pageName:"Codebase",directory:"/code"},
       {id:2,pageName:"Qualifications",directory:"/qualifications"},
@@ -60,13 +58,7 @@ class App extends React.Component {
       {id:5, pageName:"Snapchat",directory:"https://www.snapchat.com/add/tommisson", image:Snapchat},
       {id:6, pageName:"Instagram",directory:"https://www.instagram.com/tommisson/", image:Instagram},
     ],
-    jumbotron:{
-      background:JumboBG,
-      avatar:ProfilePic,
-      tagline: "FULL STACK DEVELOPER & AMATEUR PHOTOGRAPHER TAUGHT THROUGH PASSION, COMMITMENT & A LOT OF FUN"
-    },
     sideDrawerOpen: false,
-    statement:"The ability to change the way that people interact with data and technology led me to pursue Software Engineering as a field of study and eventual career. My aim is to be able to produce software at any point within the stack in my work life and at home, live in an environment surrounded and controlled by tech.",
   }
 
   drawToggleClickHandler = () =>{
@@ -87,22 +79,23 @@ class App extends React.Component {
 
     return (
       <div className="App" style = {{height:"100%"}}>
+        <BrowserRouter>
         <Navbar drawerClickHandler={this.drawToggleClickHandler} links={this.state.internallinks}/>
         <SideDraw show ={this.state.sideDrawerOpen} links={this.state.internallinks}/>
         {backdrop}
 
-        <main>
-          <Jumbotron information={this.state.jumbotron}/>
-          <InfoPanel statement={this.state.statement}/>
-          <ProjectPanel projectsList={this.state.projects}/>
-        </main>
-
-
+        <Switch>
+          <Route path="/" component={home} exact/>
+          <Route path="/code" component={code}/>
+          <Route component={error}/>
+        </Switch>
+        
         <Footer show ={this.state.sideDrawerOpen} outlinks={this.state.externallinks} inlinks={this.state.internallinks}/>
         {/*Qualifcations view
           <ul>
             <Qualifications qualifications={this.state.qualifications}/>
           </ul>*/}
+        </BrowserRouter>
       </div>
     );
   }

@@ -7,18 +7,20 @@ export default class Jumbotron extends React.Component {
     return (
         <div className="jumbotron-container">
             <div className="information-collection">
-                <h1 style={{textShadow: "3px 0px 7px rgba(0,0,0,0.5)"}}>TOM MISSON</h1>
+                <h1 style={{textShadow: "2px 0px 2px rgba(0,0,0,0.5)"}}>TOM MISSON</h1>
                 <div className="avatar">
-                    <img src={this.props.information.avatar} alt="Avatar" width="250" height="250" className = "avatar-position" style={{borderRadius:"50%", boxShadow: "2px 0px 5px rgba(0,0,0,0.5)"}}/>
+                    <img src={this.props.information.avatar} alt="Avatar" width="250" height="250" className = "avatar-position" style={{borderRadius:"50%", boxShadow: "1px 0px 5px rgba(0,0,0,0.5)"}}/>
                 </div>
-                <h3 style={{textShadow: "3px 0px 7px rgba(0,0,0,0.5)"}}>{this.props.information.tagline}
-                <br/><br/><br/><br/><br/><br/> &#x21a1; 
-                <ScrollTo>
-                    {({ scrollTo }) => (
-                    <button onClick={() => window.scroll({top:500, behavior: 'smooth' })}>Read More</button>
-                    )}
-                </ScrollTo>
-                &#x21a1;</h3>
+                <h3 style={{textShadow: "2px 0px 2px rgba(0,0,0,0.5)"}}>{this.props.information.tagline}
+                <div className="read-more-scroll">
+                <br></br>
+                    <ScrollTo >
+                        {({ scrollTo }) => (
+                        <button onClick={() => window.scroll({top:500, behavior: 'smooth' })}>&#x21a1;Read More&#x21a1;</button>
+                        )}
+                    </ScrollTo>
+                </div>
+                </h3>
             </div>    
         </div>
     )}
