@@ -34,9 +34,3 @@ app.get('/*', function (req, res) {
 });
 
 app.listen(process.env.PORT || 3001);
-
-async function tableData()
-{
-    
-    return o['Projects'];
-}
