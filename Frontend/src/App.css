@@ -285,7 +285,7 @@ footer{
   padding:60px;
 }
 
-table{
+.light-panel table{
   width: 100% !important;
   border-collapse: collapse;
   overflow-x: scroll;
@@ -293,17 +293,17 @@ table{
   width: fit-content;
 }
 
-th{
+.light-panel th{
   border-bottom: 1px #191919 solid ;
   padding:15px 30px;
 }
 
-tr,td{
+tr, td{
   padding:5px;
   margin:5px;
 }
 
-tr:nth-child(even) {
+.light-panel tr:nth-child(even) {
   background-color: #f2f2f2
 }
 
@@ -344,6 +344,27 @@ input, textarea{
 
 textarea{
   height: 15vh;
+}
+
+td a{
+  text-decoration: underline;
+}
+
+table {
+  border: solid 1px #fff;
+  text-align: center;
+  margin: 20px auto;
+  width: 80%;
+}
+
+td{
+  padding: 15px;
+  border: #fff;
+}
+
+th, tr:nth-child(even) {
+  background-color: #444;
+  padding: 10px;
 }
 
 @media(max-width:768px){
