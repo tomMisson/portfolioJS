@@ -37,7 +37,11 @@ body{
   margin-top: 60px;
 }
 
- .links p{
+main{
+  height:100%
+}
+
+.links p{
   text-align: center;
   padding-top: 15px;
 }
@@ -192,10 +196,9 @@ li {
 }
 
 footer{
-  position: relative;
-  bottom: 20;
-  left:0;
   width: 100%;
+  position: relative;
+  bottom: 0;
 }
 
 .links a{
@@ -237,7 +240,7 @@ footer{
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 95vh;
 }
 
 .avatar{
@@ -302,6 +305,45 @@ tr,td{
 
 tr:nth-child(even) {
   background-color: #f2f2f2
+}
+
+.dark-panel button{
+  padding: 10px; 
+  border: solid 1px #fff;
+  border-radius:12px; 
+  text-align:center; 
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.qualification{
+  text-align: center;
+}
+
+.qualifications{
+  padding:18px;
+  list-style: none;
+}
+
+form{
+  text-align: center;
+  margin: 20px 0px;
+}
+
+input, textarea{
+  width: 60%;
+  padding: 12px 20px;
+  margin:5px;
+  border: none;
+  border-radius: 20px;
+}
+
+.sendButton{
+  padding: 12px 40px;
+}
+
+textarea{
+  height: 15vh;
 }
 
 @media(max-width:768px){

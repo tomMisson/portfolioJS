@@ -1,10 +1,17 @@
 import React, { Component } from 'react'
 
 export default class Code extends Component {
+
+  state = {
+    projects:[]
+
+  }
+  
+
   render() {
     return (
         <main>
-            <h1>Hello</h1>
+            <h1>Code</h1>
         </main>
     )
   }

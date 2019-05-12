@@ -5,24 +5,7 @@ export default class InfoPanel extends React.Component {
   render() {
     return (
       <div className = "dark-panel">
-        <div>
-          <h2>ABOUT ME</h2>
-          <br/>
-          <p>{this.props.statement}</p>
-        </div>
-        <br/><br/>
-        <div className="bulletList">
-          <h2>HOBBIES & INTERESTS</h2>
-          <br/>
-          <ul>
-            <li>Machine learning</li>
-            <li>Automation and efficiency</li>
-            <li>Landscape and nature photography</li>
-            <li>Cycling</li>
-            <li>Cooking</li>
-          </ul>
-        </div>
-        <br/><br/>
+      
         <div className="bulletList">
           <h2>TECHNICAL SKILLS</h2>
           <br/>
@@ -45,6 +28,26 @@ export default class InfoPanel extends React.Component {
             </ul>
           </ul>
         </div>
+        <br/><br/>
+        <div>
+          <h2>ABOUT ME</h2>
+          <br/>
+          <p>{this.props.statement}</p>
+        </div>
+        <br/><br/>
+        <div className="bulletList">
+          <h2>HOBBIES & INTERESTS</h2>
+          <br/>
+          <ul>
+            <li>Machine learning</li>
+            <li>Automation and efficiency</li>
+            <li>Landscape and nature photography</li>
+            <li>Cycling</li>
+            <li>Cooking</li>
+          </ul>
+        </div>
+        <br/>
+        <a href="../../Media/cv.pdf" download="Tom Misson CV.pdf"><button type="submit">Download my CV</button></a>
       </div>
     )
   }
