@@ -303,7 +303,7 @@ tr, td{
   margin:5px;
 }
 
-.light-panel tr:nth-child(even) {
+.light-panel th, .light-panel tr:nth-child(even) {
   background-color: #f2f2f2
 }
 
