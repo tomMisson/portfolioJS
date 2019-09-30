@@ -4,7 +4,7 @@ export default class ProjectPanel extends React.Component {
 
   render() {
     return (
-      <div className = "light-panel">
+      <section className = "light-panel">
         <div className="light-panel-container">
           <h2>MY PROJECTS</h2>
           <br/>
@@ -49,7 +49,7 @@ export default class ProjectPanel extends React.Component {
                 </ul>
             </div>
         </div>
-      </div>
+      </section>
     )
   }
 }

@@ -4,7 +4,7 @@ export default class InfoPanel extends React.Component {
 
   render() {
     return (
-      <div className = "dark-panel">
+      <section className = "dark-panel">
       
         <div className="bulletList">
           <h2>TECHNICAL SKILLS</h2>
@@ -48,7 +48,7 @@ export default class InfoPanel extends React.Component {
         </div>
         <br/>
         <a href="../../Media/cv.pdf" download="Tom Misson CV.pdf"><button type="submit">Download my CV</button></a>
-      </div>
+      </section>
     )
   }
 }

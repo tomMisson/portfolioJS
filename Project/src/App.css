@@ -39,7 +39,8 @@ body{
 
 main{
   min-height: 100%;
-  padding-bottom: 50px;
+  height: 100% !important;
+  width: 100% !important;
 }
 
 .links p{
@@ -166,6 +167,8 @@ li {
   justify-content: center;
   font-size: 1.4rem;
   text-align: center;
+  padding:0;
+  margin: 0;
 }
 
 .sideDraw a{
@@ -179,7 +182,8 @@ li {
 }
 
 .sideDraw li{
-  margin: 0.5rem;
+  font-size: 1.4rem;
+  padding: 0.6rem;
 }
 
 .backdrop{
@@ -370,7 +374,13 @@ th, tr:nth-child(even) {
 .codeTable{
   background-color: #fff;
   color:#000;
-  width: 90%
+  border: none;
+  overflow-x: scroll; 
+  text-align: center;
+  margin:40px auto;
+  border-collapse: collapse;
+  display: block;
+  width: 90% !important;
 }
 
 .codeTable a{

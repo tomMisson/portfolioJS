@@ -11,11 +11,13 @@ export default class SideDrawer extends Component {
     return (
       <nav className={drawerClasses}>
           <ul>
-          {
-            this.props.links.map((link) => (
-              <li key={link.id}><Link to={link.directory} >{link.pageName}</Link></li>
-            ))
-          }
+            {
+              this.props.links.map((link) => (
+                <li key={link.id}><Link to={link.directory} >{link.pageName}</Link></li>
+              ))
+            }
+            <li><a href="tel:+447542274199">Phone</a></li>
+            <li><a href="mailto:11tmisson@gmail.com">Email</a></li>
           </ul>
       </nav>
     )

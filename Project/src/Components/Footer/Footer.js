@@ -17,9 +17,12 @@ export default class Footer extends Component {
             <ul>
                 {
                     this.props.inlinks.map((link) => (
-                <li key={link.id}><a href={link.directory} >{link.pageName}</a></li> 
+                    <li key={link.id}><a href={link.directory} >{link.pageName}</a></li> 
                 ))
                 }
+
+                <li><a href="mailto:11tmisson@gmail.com">Email</a></li>
+                <li><a href="tel:+447542274199">Phone</a></li>
             </ul>
             <p>&copy; Tom Misson {new Date().getFullYear()}</p>
           </div>
