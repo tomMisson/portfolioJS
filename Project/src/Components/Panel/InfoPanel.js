@@ -1,4 +1,5 @@
 import React from 'react'
+import cv from '../../Media/cv.pdf'
 
 export default class InfoPanel extends React.Component {
 
@@ -12,7 +13,7 @@ export default class InfoPanel extends React.Component {
           <ul>
             <li>Application development</li>
             <ul>
-              <li>Web - MEAN stack MVC5 framework for .NET</li>
+              <li>Web - MERN stack, MVC5 framework for .NET</li>
               <li>Desktop - Java and Python</li>
               <li>Preference of web based applications</li>
             </ul>
@@ -47,7 +48,7 @@ export default class InfoPanel extends React.Component {
           </ul>
         </div>
         <br/>
-        <a href="../../Media/cv.pdf" download="Tom Misson CV.pdf"><button type="submit">Download my CV</button></a>
+        <a href={cv} download="TomMisson_CV.pdf"><button type="submit">Download my CV</button></a>
       </section>
     )
   }
