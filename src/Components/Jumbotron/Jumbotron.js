@@ -1,7 +1,15 @@
 import React from 'react'
-import { ScrollTo } from "react-scroll-to";
+import $ from 'jquery'
 
 export default class Jumbotron extends React.Component {
+
+    scrollToDiv() {
+        $("#scrollBtn").click(function() {
+            $('html,body').animate({
+                scrollTop: $(".dark-panel").offset().top-70},
+                'slow');
+        });
+    }
 
     render() {
     return (
@@ -14,11 +22,7 @@ export default class Jumbotron extends React.Component {
                 <h3 style={{textShadow: "2px 0px 2px rgba(0,0,0,0.5)"}}>{this.props.information.tagline}
                 <div className="read-more-scroll">
                 <br></br>
-                    <ScrollTo >
-                        {({ scrollTo }) => (
-                        <button onClick={() => window.scroll({top:700, behavior: 'smooth' })}>&#x21a1;Read More&#x21a1;</button>
-                        )}
-                    </ScrollTo>
+                    <button id="scrollBtn" onClick = {this.scrollToDiv}>&#x21a1;Read More&#x21a1;</button>   
                 </div>
                 </h3>
             </div>    

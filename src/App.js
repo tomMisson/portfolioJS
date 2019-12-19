@@ -1,13 +1,11 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-//import Qualifications from './Components/Qualifications/Qualifications';
 
 import home from './Components/Pages/Home';
 import code from './Components/Pages/Code';
 import error from './Components/Pages/Error';
-import qualifications from './Components/Pages/Qualifications';
-import services from './Components/Pages/Services';
+import blog from './Components/Pages/Blog';
 
 import Navbar from './Components/Navbar/Navbar';
 import SideDraw from './Components/Navbar/SideDrawer/SideDrawer';
@@ -28,11 +26,10 @@ class App extends React.Component {
         internallinks: [
             { id: 0, pageName: "Home", directory: "/" },
             { id: 1, pageName: "Codebase", directory: "/code" },
-            { id: 2, pageName: "Qualifications", directory: "/qualifications" },
-            { id: 3, pageName: "Services", directory: "/services" },
+            { id: 2, pageName: "Blog", directory: "/blog" },
             ],
         externallinks: [
-            { id: 1, pageName: "Email", directory: "/contact", image: Email },
+            { id: 1, pageName: "Email", directory: "mailto:11tmisson@gmail.com", image: Email },
             { id: 2, pageName: "Github", directory: "https://github.com/tomMisson", image: Github },
             { id: 3, pageName: "LinkedIn", directory: "https://www.linkedin.com/in/thomasmisson/", image: LinkedIn },
             { id: 4, pageName: "Twitter", directory: "https://twitter.com/thomasmisson", image: Twitter },
@@ -68,11 +65,9 @@ class App extends React.Component {
                 <Switch>
                     <Route path="/" component={home} exact/>
                     <Route path="/code" component={code}/>
-                    <Route path="/qualifications" component={qualifications}/>
-                    <Route path="/services" component = {services}/>
+                    <Route path="/blog" component={blog}/>
                     <Route component={error}/>
                 </Switch>
-                
                 <Footer show ={this.state.sideDrawerOpen} outlinks={this.state.externallinks} inlinks={this.state.internallinks}/>
                 </BrowserRouter>
             </div>

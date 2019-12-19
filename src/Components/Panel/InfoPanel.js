@@ -1,5 +1,4 @@
 import React from 'react'
-import cv from '../../Media/cv.pdf'
 
 export default class InfoPanel extends React.Component {
 
@@ -11,10 +10,11 @@ export default class InfoPanel extends React.Component {
           <h2>TECHNICAL SKILLS</h2>
           <br/>
           <ul>
-            <li>Application development</li>
+            <li>Software development</li>
             <ul>
-              <li>Web - MERN stack, MVC5 framework for .NET</li>
+              <li>Web - React, NodeJS, Express, Flask, PHP, JavaScript</li>
               <li>Desktop - Java and Python</li>
+              <li>Databases - MongoDB, MariaDB, Oracle SQL</li>
               <li>Preference of web based applications</li>
             </ul>
             <li>Network & infrastructure</li>
@@ -26,6 +26,7 @@ export default class InfoPanel extends React.Component {
             <ul>
               <li>Built servers and PC's  </li>
               <li>Currently manage an IoT network with smart bulbs, sensors and sound system.</li>
+              <li>Working on some prototype IoT stuff</li>
             </ul>
           </ul>
         </div>
@@ -40,15 +41,14 @@ export default class InfoPanel extends React.Component {
           <h2>HOBBIES & INTERESTS</h2>
           <br/>
           <ul>
+            <li>Hackathons</li>
             <li>Machine learning</li>
             <li>Automation and efficiency</li>
             <li>Landscape and nature photography</li>
-            <li>Cycling</li>
-            <li>Cooking</li>
           </ul>
         </div>
         <br/>
-        <a href={cv} download="TomMisson_CV.pdf"><button type="submit">Download my CV</button></a>
+        <a href="https://docs.google.com/document/d/1Kqr4zAkT3qddC5qceM1zHs8fDvMlOnNuGzAasCxdM9c/export?format=pdf" download="TomMisson_CV.pdf"><button type="submit">Download my CV</button></a>
       </section>
     )
   }

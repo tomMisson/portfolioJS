@@ -41,14 +41,13 @@ export default class ProjectPanel extends React.Component {
                 <ul>
                     <li>Dockerized containers/microservices</li>
                     <li>Image/facial recognition using GCP</li>
-                    <li>Building myIoT network</li>
-                    <li>Make an Iot locally hosted controller</li>
-                    <li>File server over website</li>
-                    <li>E-portfolio backend</li>
+                    <li>Building my IoT network</li>
+                    <li>Learn Go</li>
                     <li>Try to bake a cake</li>
                 </ul>
             </div>
         </div>
+        <br></br>
       </section>
     )
   }
