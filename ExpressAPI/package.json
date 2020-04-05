@@ -1,0 +1,16 @@
+{
+  "name": "expressapi",
+  "version": "1.0.0",
+  "description": "ExpressAPI intended for server deployment ",
+  "main": "server.js",
+  "scripts": {
+    "test": "start",
+    "start": "node server.js"
+  },
+  "author": "Tom Misson",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1"
+  }
+}
