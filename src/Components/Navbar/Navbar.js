@@ -1,6 +1,5 @@
 import React from 'react'
 import DrawToggleButton from './SideDrawer/DrawToggleButton';
-import {Link} from 'react-router-dom';
 
 export default class Navbar extends React.Component {
 
@@ -20,7 +19,7 @@ export default class Navbar extends React.Component {
                     <ul>
                         {
                             this.props.links.map((link) => (
-                                <li key={link.id}><Link to={link.directory} >{link.pageName}</Link></li>
+                                <li key={link.id}><a href={link.directory} >{link.pageName}</a></li>
                             ))
                         }
                         <li><a href="mailto:11tmisson@gmail.com">Email</a></li>

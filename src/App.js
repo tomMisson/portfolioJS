@@ -1,11 +1,5 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-
-import home from './Components/Pages/Home';
-import code from './Components/Pages/Code';
-import error from './Components/Pages/Error';
-import blog from './Components/Pages/Blog';
 
 import Navbar from './Components/Navbar/Navbar';
 import SideDraw from './Components/Navbar/SideDrawer/SideDrawer';
@@ -18,15 +12,14 @@ import LinkedIn from "./Media/Social/linkedin.png";
 import Twitter from './Media/Social/twitter.png';
 import Snapchat from "./Media/Social/snapchat.png";
 import Instagram from "./Media/Social/instagram.png";
+import Home from './Components/Home';
 
 
 class App extends React.Component {
 
     state = {
         internallinks: [
-            { id: 0, pageName: "Home", directory: "/" },
-            { id: 1, pageName: "Codebase", directory: "/code" },
-            { id: 2, pageName: "Blog", directory: "/blog" },
+            
             ],
         externallinks: [
             { id: 1, pageName: "Email", directory: "mailto:11tmisson@gmail.com", image: Email },
@@ -57,19 +50,11 @@ class App extends React.Component {
 
         return ( 
             <div className="App">
-                <BrowserRouter>
                 <Navbar drawerClickHandler={this.drawToggleClickHandler} links={this.state.internallinks}/>
                 <SideDraw show ={this.state.sideDrawerOpen} links={this.state.internallinks}/>
                 {backdrop}
-
-                <Switch>
-                    <Route path="/" component={home} exact/>
-                    <Route path="/code" component={code}/>
-                    <Route path="/blog" component={blog}/>
-                    <Route component={error}/>
-                </Switch>
+                <Home/>
                 <Footer show ={this.state.sideDrawerOpen} outlinks={this.state.externallinks} inlinks={this.state.internallinks}/>
-                </BrowserRouter>
             </div>
         );
     }

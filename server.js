@@ -1,11 +1,8 @@
 const express = require('express');
 const axios = require('axios');
-const path = require('path');
 const app = express();
 
-app.use(express.static(path.join('../Frontend/', 'build')));
-
-app.get('/api/git-projects', async function (req, res) {
+app.get('/api/git-projects', async (req, res) => {
   let response = await axios.get('https://api.github.com/users/tomMisson/repos').catch();
     let data = response.data;
 
@@ -30,7 +27,7 @@ app.get('/api/git-projects', async function (req, res) {
 });
 
 app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+    res.send("<h1>API endpoint</h1>")
 });
 
-app.listen(process.env.PORT || 3001);
+app.listen(3001);

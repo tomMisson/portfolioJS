@@ -1,8 +1,9 @@
-import InfoPanel from '../Panel/InfoPanel';
-import Jumbotron from '../Jumbotron/Jumbotron';
-import ProjectPanel from '../Panel/ProjectPanel';
-import JumboBG from '../../Media/Jumbotron/Background.jpg';
-import ProfilePic from '../../Media/Jumbotron/profile.jpg';
+import InfoPanel from './Panel/InfoPanel';
+import Jumbotron from './Jumbotron/Jumbotron';
+import ProjectPanel from './Panel/ProjectPanel';
+import JumboBG from '../Media/Jumbotron/Background.jpg';
+import ProfilePic from '../Media/Jumbotron/profile.jpg';
+import Code from './Codebase';
 
 import React, { Component } from 'react'
 
@@ -29,6 +30,7 @@ export default class Home extends Component {
             <main>
                 <Jumbotron information={this.state.jumbotron}/>
                 <InfoPanel statement={this.state.statement}/>
+                <Code/>
                 <ProjectPanel projectsList={this.state.projects}/>
             </main>
         );

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class Code extends Component {
+export default class Codebase extends Component {
 
   state = {
       projects:[]
@@ -14,8 +14,8 @@ export default class Code extends Component {
 
   render() {
     return (
-        <main>
-            <h1>Code</h1>
+        <section>
+            <h2 className="dark-panel"> CODE</h2>
             <table className="codeTable">
               <thead>
                 <tr>
@@ -38,7 +38,7 @@ export default class Code extends Component {
               )}
               </tbody>
             </table>
-        </main>
+        </section>
     )
   }
 }
