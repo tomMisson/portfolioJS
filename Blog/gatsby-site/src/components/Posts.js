@@ -31,7 +31,7 @@ const Posts = () => {
     {
       data.allMarkdownRemark.edges.map( post => {
 
-        if(post.node.frontmatter.titleimg !== undefined)
+        if(post.node.frontmatter.titleimg !== null)
         {
           return (
             <Link to={post.node.frontmatter.path}>
@@ -47,13 +47,13 @@ const Posts = () => {
 
         else{
           return (
-            
+            <Link to={post.node.frontmatter.path}>
               <section className="post" key={post.node.frontmatter.path}>
                 <h3>{post.node.frontmatter.title}</h3>
                 <p>{post.node.frontmatter.desc}</p>
                 <small>{post.node.frontmatter.date}</small>
               </section>
-          
+            </Link>
           )
         }
       })
