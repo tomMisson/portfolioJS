@@ -16,6 +16,7 @@ const Posts = () => {
           frontmatter {
             title
             titleimg
+            theme
             desc
             date(fromNow: true)
             path
@@ -34,11 +35,27 @@ const Posts = () => {
         if(post.node.frontmatter.titleimg !== null)
         {
           return (
-            <Link to={post.node.frontmatter.path}>
-            <section className="post" key={post.node.frontmatter.path}>
-              <img src={post.node.frontmatter.titleimg}/>
+            <Link to={post.node.frontmatter.path} key={post.node.frontmatter.path}>
+            <section className="post">
+              <img alt="title card" src={post.node.frontmatter.titleimg}/>
               <h3>{post.node.frontmatter.title}</h3>
               <p>{post.node.frontmatter.desc}</p>
+              <small>{post.node.frontmatter.theme}</small> - 
+              <small>{post.node.frontmatter.date}</small>
+            </section>
+            </Link>
+          )
+        }
+
+        else if(post.node.frontmatter.theme !== null)
+        {
+          return (
+            <Link to={post.node.frontmatter.path} key={post.node.frontmatter.path}>
+            <section className="post">
+              <img alt="title card" src={post.node.frontmatter.titleimg}/>
+              <h3>{post.node.frontmatter.title}</h3>
+              <p>{post.node.frontmatter.desc}</p>
+              <small>{post.node.frontmatter.theme}</small> - 
               <small>{post.node.frontmatter.date}</small>
             </section>
             </Link>
@@ -47,8 +64,8 @@ const Posts = () => {
 
         else{
           return (
-            <Link to={post.node.frontmatter.path}>
-              <section className="post" key={post.node.frontmatter.path}>
+            <Link to={post.node.frontmatter.path} key={post.node.frontmatter.path}>
+              <section className="post">
                 <h3>{post.node.frontmatter.title}</h3>
                 <p>{post.node.frontmatter.desc}</p>
                 <small>{post.node.frontmatter.date}</small>
