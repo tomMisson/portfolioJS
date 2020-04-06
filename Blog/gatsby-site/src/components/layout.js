@@ -7,7 +7,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
@@ -35,7 +35,11 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
         <footer>
-          © {new Date().getFullYear()},
+          <a className="social" to="https://twitter.com/thomas_misson">Twitter </a> &bull;
+          <a className="social" to="http://github.com/tomMisson"> GitHub</a> &bull;
+          <a className="social" to="https://www.linkedin.com/in/thomasmisson/"> LinkedIn</a>
+          <br/>
+          © {new Date().getFullYear()}
           {` `}
           Tom Misson
         </footer>

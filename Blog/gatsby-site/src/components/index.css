@@ -8,7 +8,6 @@ h3{
     padding: 15px;
     margin: 1rem 0rem;
     overflow: auto;
-    width: 80%;
 }
 
 .post img{
@@ -17,10 +16,11 @@ h3{
     max-height: 150px;
     padding: 10px;
     margin-right: 30px;
+    margin-bottom: 0;
 }
 
 .post small{
-    clear: both;
+    float: right;
     position: relative;
     bottom: 0;
 }
@@ -28,4 +28,22 @@ h3{
 a{
     text-decoration: none;
     color: inherit;
+}
+
+footer{
+    text-align: center;
+}
+
+.social{
+    color: #fc9403;
+    transition: 0.7s;
+}
+
+.social:hover{
+    color: rgb(199, 132, 7);
+    transition: 0.7s;
+}
+
+.socials{
+    display: inline-block;
 }
