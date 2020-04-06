@@ -10,8 +10,8 @@ export default function Template({ data }) {
   return (
     <div className="blog-post">
         <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.desc}</h2>
-        <h6>{frontmatter.date}</h6>
+        <p className="desc">{frontmatter.desc}</p>
+        <small className="desc">{frontmatter.date}</small>
         <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}

@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Blog`,
+    description: `Welcome to my corner of the internet! This page will detail hacks and bodges I have done with tech, travel, food and drink and just about anything else under the sun that I want to write about.`,
+    author: `Tom Misson`,
+    theme_color:'#fc9403'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -18,13 +19,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
+        name: `Tom Misson Blog`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#fc9403`,
+        theme_color: `#fc9403`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-transformer-remark`,
@@ -35,5 +36,22 @@ module.exports = {
         path: `${__dirname}/src/content`,
       },
     },
+    `gatsby-plugin-sharp`,
+      {
+        resolve: `gatsby-transformer-remark`,
+        options: {
+          plugins: [
+            {
+              resolve: `gatsby-remark-images`,
+              options: {
+                // It's important to specify the maxWidth (in pixels) of
+                // the content container as this plugin uses this as the
+                // base for generating different widths of each image.
+                maxWidth: 590,
+              },
+            },
+          ],
+        },
+      },
   ],
 }
