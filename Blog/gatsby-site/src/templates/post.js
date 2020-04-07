@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Header from "../components/header"
 
 
 export default function Template({ data }) {
@@ -8,15 +9,18 @@ export default function Template({ data }) {
   
   
   return (
-    <div className="blog-post">
-        <h1>{frontmatter.title}</h1>
-        <p className="desc">{frontmatter.desc}</p>
-        <small className="desc">{frontmatter.date}</small>
-        <div
-            className="blog-post-content"
-            dangerouslySetInnerHTML={{ __html: html }}
-        />
-    </div>
+    <>
+      <Header/>
+      <div className="blog-post">
+          <h1>{frontmatter.title}</h1>
+          <p className="desc">{frontmatter.desc}</p>
+          <small className="desc">{frontmatter.date}</small>
+          <div
+              className="blog-post-content"
+              dangerouslySetInnerHTML={{ __html: html }}
+          />
+      </div>
+    </>
   )
 }
 export const pageQuery = graphql`
