@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import "./index.css"
+import "./styles.css"
 
 const Posts = () => {
   const data = useStaticQuery(graphql`
@@ -81,7 +81,7 @@ const Posts = () => {
           return (
             <Link to={post.node.frontmatter.path} key={post.node.frontmatter.path}>
               <section className="post">
-                <h3>{post.node.frontmatter.title}</h3>
+                <h3 className="lone">{post.node.frontmatter.title}</h3>
                 <p>{post.node.frontmatter.desc}</p>
                 <small>{post.node.frontmatter.date}</small>
               </section>
