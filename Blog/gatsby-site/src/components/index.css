@@ -11,13 +11,8 @@ h3{
     z-index: 200;
 }
 
-.post img{
-    float: left;
-    max-width: 200;
-    max-height: 150px;
-    padding: 10px;
-    margin-right: 30px;
-    margin-bottom: 0;
+.post div{
+    text-align: center;
 }
 
 .post h3{
@@ -51,15 +46,23 @@ span{
     display: inline-flex;
 }
 
-@media screen and (min-width: 876px) {
+@media screen and (min-width: 764px) {
     .post{
-        width: 45%;
-        display: inline-block;
+        width: 80%;
         margin-left: 3rem;
-        height: 10rem;
-        overflow: hidden;
     }
-    
+
+    .post img{
+        float: left;
+        max-width: 100;
+        max-height: 100px;
+        padding: 10px;
+        margin-right: 30px;
+    }
+
+    .post small{
+        float: right;
+    }
 }
 
 @media screen and (min-width: 1220px) {
@@ -70,5 +73,16 @@ span{
         height: 10rem;
         overflow: hidden;
     }
-    
+
+    .post img{
+        float: left;
+        max-width: 100;
+        max-height: 100px;
+        padding: 10px;
+        margin-right: 30px;
+    }
+
+    .post p{
+        clear: left;
+    }
 }
