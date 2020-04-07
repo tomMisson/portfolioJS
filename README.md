@@ -3,7 +3,7 @@
  `V-2.0` - React app (portfolio), GatsbyJS (blog), Express API, Mongo DB and MySQL database all Dockerised 
 
 ## Branches 
-`master` - current version of code  
+`master` - current version of code ![Node.js CI](https://github.com/tomMisson/portfolioJS/workflows/Node.js%20CI/badge.svg?branch=master)    
 `V-1.0` - Not actively maitained but is the currently deployed system  
 `V-2.0` - Current development branch  
 
