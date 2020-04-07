@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Header from "../components/header"
+import Footer from "../components/footer"
 
 
 export default function Template({ data }) {
@@ -12,14 +13,19 @@ export default function Template({ data }) {
     <>
       <Header/>
       <div className="blog-post">
+        <div className="sub-header">
           <h1>{frontmatter.title}</h1>
-          <p className="desc">{frontmatter.desc}</p>
-          <small className="desc">{frontmatter.date}</small>
-          <div
-              className="blog-post-content"
-              dangerouslySetInnerHTML={{ __html: html }}
-          />
+          <p className="desc">{frontmatter.desc}<small className="desc">  -  {frontmatter.date}</small></p>
+        </div>
+
+        <hr/>
+        
+        <div
+            className="blog-post-content"
+            dangerouslySetInnerHTML={{ __html: html }}
+        />
       </div>
+      <Footer/>
     </>
   )
 }
