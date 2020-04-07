@@ -1,6 +1,7 @@
 {
   "name": "e-portfolio ",
   "version": "0.1.0",
+  "homepage": ".",
   "dependencies": {
     "jquery": "^3.4.1",
     "react": "^16.10.2",
