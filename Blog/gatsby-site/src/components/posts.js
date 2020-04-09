@@ -32,23 +32,7 @@ const Posts = () => {
     {
       data.allMarkdownRemark.edges.map( post => {
 
-        if(post.node.frontmatter.titleimg !== null)
-        {
-          return (
-            <Link to={post.node.frontmatter.path} key={post.node.frontmatter.path}>
-            <section className="post">
-              <div>
-                <img alt="title card" width="100" height="100" src={post.node.frontmatter.titleimg}/>
-              </div>
-              <h3>{post.node.frontmatter.title}</h3>
-              <p>{post.node.frontmatter.desc}</p>
-              <small>{post.node.frontmatter.date}</small>
-            </section>
-            </Link>
-          )
-        }
-
-        else if(post.node.frontmatter.theme !== null && post.node.frontmatter.titleimg !== null)
+        if(post.node.frontmatter.theme !== null && post.node.frontmatter.titleimg !== null)
         {
           return (
             <Link to={post.node.frontmatter.path} key={post.node.frontmatter.path}>
@@ -59,6 +43,22 @@ const Posts = () => {
               <h3>{post.node.frontmatter.title}</h3>
               <p>{post.node.frontmatter.desc}</p>
               <small>{post.node.frontmatter.theme} - {post.node.frontmatter.date}</small> 
+            </section>
+            </Link>
+          )
+        }
+
+        else if(post.node.frontmatter.titleimg !== null)
+        {
+          return (
+            <Link to={post.node.frontmatter.path} key={post.node.frontmatter.path}>
+            <section className="post">
+              <div>
+                <img alt="title card" width="100" height="100" src={post.node.frontmatter.titleimg}/>
+              </div>
+              <h3>{post.node.frontmatter.title}</h3>
+              <p>{post.node.frontmatter.desc}</p>
+              <small>{post.node.frontmatter.date}</small>
             </section>
             </Link>
           )
