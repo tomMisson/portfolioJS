@@ -1,6 +1,6 @@
 ---
 title: Hack Quarantine
-date: 2020-04-09 12:10
+date: 2020-04-15 09:00
 path: /hack-quarantine
 desc: Hack Quarantine was an online digital hackathon that ran from 23rd March - 12th April 2020 and is one of the largest student lead events.
 theme: Hackathons
