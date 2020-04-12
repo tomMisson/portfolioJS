@@ -12,9 +12,9 @@ My god was this a rollercoaster🎢. Ask any of the team involved and they will 
 
 ## Why did we do this to ourselves? 🤔
 
-You might be wondering, why did you endure over 600 hours of stress, wake up in the middle of the night on multipul occasions and spend 9+ hours a day working on this? Truth be told, I wanted something to do. I wanted to make a change to peoples lives, I wanted to do something about COVID-19 because it had affected so many people.  
+You might be wondering, why did you endure over 600 hours of stress, wake up in the middle of the night on mutiple occasions and spend 9+ hours a day working on this? Truth be told, I wanted something to do. I wanted to make a change to peoples lives, I wanted to do something about COVID-19 because it had affected so many people.  
   
-I later would find out that someone close to me would sadly pass from Coronavirus 😔. The thing is thought that COVID-19 did what many thought was unlikely. It shook the most developed parts of the world and is making them fall apart. We have to stick together though and we will get through this.🤝
+I later would find out that someone close to me would sadly pass from Coronavirus 😔. The thing that shocks me is that COVID-19 did what many thought was unlikely. It shook the most developed parts of the world and is making them fall apart. We have to stick together though and we will get through this.🤝
 
 ## Give it your all 💯
 
@@ -32,7 +32,7 @@ While Hack Quarantine was the biggest student lead hackathon globally as well as
   
 I already sit at home till the early hours working on projects, *this for example*, and pushing hackathons online don't have the same effect. There's a clear disconnect between the community because as hard as I have tried, it is harder in every way to create a community, to show off projects and to ultimately provide you with the experience of meeting new people, talking to sponsors and raiding the snack table when you are on the _6th_ hour of not having a project.
 
-I look forward to when things return to normal so I can meet with friendos, share colins and appreciate sotch with the best team I have worked with to date and to also be able to take part in hackathons like //Slash in Berlin and other "IRL" hackathons. 
+I look forward to when things return to normal so I can meet with friendos, share colins and appreciate Scotch with the best team I have worked with to date and to also be able to take part in hackathons like //Slash in Berlin and other "IRL" hackathons. 
 
   
   
