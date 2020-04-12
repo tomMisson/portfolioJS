@@ -20,6 +20,7 @@ const Posts = () => {
             desc
             date(fromNow: true)
             path
+            visible
           }
         }
       }
@@ -31,6 +32,14 @@ const Posts = () => {
    <>
     {
       data.allMarkdownRemark.edges.map( post => {
+      
+        if(!visible)
+        {
+          return(
+            <>
+            </>
+          )
+        }
 
         if(post.node.frontmatter.theme !== null && post.node.frontmatter.titleimg !== null)
         {
@@ -47,7 +56,6 @@ const Posts = () => {
             </Link>
           )
         }
-
         else if(post.node.frontmatter.titleimg !== null)
         {
           return (
