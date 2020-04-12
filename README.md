@@ -4,7 +4,7 @@
 
 ## Branches 
 `master` - current version of code   
-`V-1.0` - Not actively maitained but is the currently deployed system  
+`V-1.0` - Not actively maitained but is the currently deployed system on local baremetal
 `V-2.0` - Current development branch  
 
 ## Breakdown 
