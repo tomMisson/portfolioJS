@@ -38,6 +38,8 @@ export const pageQuery = graphql`
         path
         desc
         title
+        titleimg
+        visible
       }
     }
   }
