@@ -44,7 +44,7 @@ const Posts = () => {
         if(post.node.frontmatter.theme !== null && post.node.frontmatter.titleimg !== null)
         {
           return (
-            <Link to={post.node.frontmatter.path} key={post.node.frontmatter.path}>
+            <Link className="postLink" to={post.node.frontmatter.path} key={post.node.frontmatter.path}>
             <section className="post">
               <div>
                 <img alt="title card" width="100" height="100" src={post.node.frontmatter.titleimg}/>
@@ -59,7 +59,7 @@ const Posts = () => {
         else if(post.node.frontmatter.titleimg !== null)
         {
           return (
-            <Link to={post.node.frontmatter.path} key={post.node.frontmatter.path}>
+            <Link className="postLink" to={post.node.frontmatter.path} key={post.node.frontmatter.path}>
             <section className="post">
               <div>
                 <img alt="title card" width="100" height="100" src={post.node.frontmatter.titleimg}/>
@@ -75,7 +75,7 @@ const Posts = () => {
         else if(post.node.frontmatter.theme !== null)
         {
           return (
-            <Link to={post.node.frontmatter.path} key={post.node.frontmatter.path}>
+            <Link className="postLink" to={post.node.frontmatter.path} key={post.node.frontmatter.path}>
             <section className="post">
               <h3>{post.node.frontmatter.title}</h3>
               <p>{post.node.frontmatter.desc}</p>
@@ -87,7 +87,7 @@ const Posts = () => {
 
         else{
           return (
-            <Link to={post.node.frontmatter.path} key={post.node.frontmatter.path}>
+            <Link className="postLink" to={post.node.frontmatter.path} key={post.node.frontmatter.path}>
               <section className="post">
                 <h3 className="lone">{post.node.frontmatter.title}</h3>
                 <p>{post.node.frontmatter.desc}</p>
