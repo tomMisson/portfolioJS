@@ -33,7 +33,7 @@ const Posts = () => {
     {
       data.allMarkdownRemark.edges.map( post => {
       
-        if(!visible)
+        if(!post.node.frontmatter.visible)
         {
           return(
             <>
