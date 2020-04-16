@@ -1,13 +1,9 @@
-# Server solution
- `V-1.0` - React app w/ states storing the data and built in Async fetch for GitHub repo data  
- `V-2.0` - React app (portfolio), GatsbyJS (blog), Express API, Mongo DB and MySQL database all Dockerised 
+# My websites - portfolioJS
 
-## Branches 
-`master` - current version of code   
-`V-1.0` - Not actively maitained but is the currently deployed system on local baremetal
-`V-2.0` - Current development branch  
+Designed to be a landing page for my work that I have done, projects I have worked on and it be a proessional portfolio. This is currently hosted [here](https://tommisson.uk)
 
-## Breakdown 
+
+## Other sites 
 
 `Blog` - A gatsbyjs project which using markdown files for blog posts  
 `Portfolio` - A React app as a single page site to showcase my work and projects that I am doing   
