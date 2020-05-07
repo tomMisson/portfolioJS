@@ -3,13 +3,18 @@ import React, { Component } from 'react'
 export default class Codebase extends Component {
 
   state = {
-      projects:[]
+    projects:[]
   }
 
   componentDidMount(){
-    fetch('/api/git-projects')
-    .then(res => res.json(res))
-    .then(project => this.setState({ projects: project}))
+    this.getData()
+  }
+
+  getData = async () =>
+  {
+    await fetch("https://api.github.com/users/tomMisson/repos")
+      .then(res => res.json())
+      .then(res => this.setState({projects:res}))
   }
 
   render() {
@@ -30,10 +35,10 @@ export default class Codebase extends Component {
               {this.state.projects.map(project =>
                 <tr key={project.id}>
                   <td><a alt="project link" href={project.url}>{project.name}</a></td>
-                  <td>{project.desc}</td>
-                  <td>{project.lang}</td>
+                  <td>{project.description}</td>
+                  <td>{project.language}</td>
                   <td>{project.forks}</td>
-                  <td>{project.stars}</td>
+                  <td>{project.stargazers_count}</td>
                 </tr>
               )}
               </tbody>

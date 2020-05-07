@@ -22,7 +22,7 @@ class App extends React.Component {
             
             ],
         externallinks: [
-            { id: 1, pageName: "Email", directory: "mailto:11tmisson@gmail.com", image: Email },
+            { id: 1, pageName: "Email", directory: "mailto:hi@tommisson.uk", image: Email },
             { id: 2, pageName: "Github", directory: "https://github.com/tomMisson", image: Github },
             { id: 3, pageName: "LinkedIn", directory: "https://www.linkedin.com/in/thomasmisson/", image: LinkedIn },
             { id: 4, pageName: "Twitter", directory: "https://twitter.com/thomasmisson", image: Twitter },
