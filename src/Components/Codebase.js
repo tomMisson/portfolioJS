@@ -15,6 +15,8 @@ export default class Codebase extends Component {
     await fetch("https://api.github.com/users/tomMisson/repos")
       .then(res => res.json())
       .then(res => this.setState({projects:res}))
+      console.log(this.state.projects);
+      
   }
 
   render() {
@@ -34,7 +36,7 @@ export default class Codebase extends Component {
               <tbody>
               {this.state.projects.map(project =>
                 <tr key={project.id}>
-                  <td><a alt="project link" href={project.url}>{project.name}</a></td>
+                  <td><a alt="project link" href={project.html_url}>{project.name}</a></td>
                   <td>{project.description}</td>
                   <td>{project.language}</td>
                   <td>{project.forks}</td>
