@@ -7,4 +7,4 @@ Designed to be a landing page for my work that I have done, projects I have work
 
 `Blog` - A gatsbyjs project which using markdown files for blog posts  
 `Portfolio` - A React app as a single page site to showcase my work and projects that I am doing   
-`Express API` - Developing endpoints for any hosted data that I may want to share  
+`Workshops` - Developing workshop content and talk's to give in person  
