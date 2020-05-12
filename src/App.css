@@ -50,6 +50,7 @@ a, a:hover{
 
 button{
   color: #fc9403;
+  background-color: #fff;
   text-decoration: none;
   cursor: pointer;
   background: transparent;
@@ -97,3 +98,13 @@ marquee{
 ::-webkit-scrollbar { 
   display: none; 
 } 
+
+@media only screen and (max-width: 768px) {
+  marquee{
+    width: 90%;
+  }
+
+  button{
+    margin: 0;
+  }
+}
