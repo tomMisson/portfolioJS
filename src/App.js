@@ -1,9 +1,5 @@
 import React from 'react';
 import './App.css';
-
-import Navbar from './Components/Navbar/Navbar';
-import SideDraw from './Components/Navbar/SideDrawer/SideDrawer';
-import Backdrop from './Components/Backdrop/Backdrop';
 import Footer from './Components/Footer/Footer';
 
 import Email from './Media/Social/email.png';
@@ -29,30 +25,12 @@ class App extends React.Component {
             { id: 5, pageName: "Snapchat", directory: "https://www.snapchat.com/add/tommisson", image: Snapchat },
             { id: 6, pageName: "Instagram", directory: "https://www.instagram.com/tommisson/", image: Instagram },
         ],
-        sideDrawerOpen: false,
     }
 
-    drawToggleClickHandler = () => {
-        this.setState((prevState) => { return { sideDrawerOpen: !prevState.sideDrawerOpen } })
-    };
 
-    backdropClickHandler = () => {
-        this.setState({ sideDrawerOpen: false });
-    };
-
-    render() {
-        let backdrop;
-        if (this.state.sideDrawerOpen) {
-            backdrop = < Backdrop click = { this.backdropClickHandler }
-            />
-        }
-
-
+    render(){
         return ( 
             <div className="App">
-                <Navbar drawerClickHandler={this.drawToggleClickHandler} links={this.state.internallinks}/>
-                <SideDraw show ={this.state.sideDrawerOpen} links={this.state.internallinks}/>
-                {backdrop}
                 <Home/>
                 <Footer show ={this.state.sideDrawerOpen} outlinks={this.state.externallinks} inlinks={this.state.internallinks}/>
             </div>
