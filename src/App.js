@@ -11,7 +11,7 @@ class App extends React.Component {
         jumbotron:{
         background:JumboBG,
         avatar:ProfilePic,
-        tagline: "💻 Software Dev • ✍️ Blogger • 🏆 @twilio Champion • 👋 @helloHackerSoc Vice-Chair • 🧰 Toolkit manager @Hackathons_UK • 😍 Emoji enthusiast"
+        tagline: "<p>💻 Software Dev •<a title='Blog' href='https://blog.tommisson.uk'> ✍️ Blogger </a>• <a title='Twilio' href='https://www.twilio.com/champions'>🏆 Twilio Champion</a> • <a title='helloHackers' href='https://hellohackers.co.uk'>👋 helloHackers Society Vice-Chair </a> • <a title='Hackathons Wiki' href='https://hack.athon.uk'> 🧰 Toolkit manager at Hackathons_UK </a>• 😍 Emoji enthusiast</p>"
         }
     }
 

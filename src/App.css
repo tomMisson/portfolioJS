@@ -14,7 +14,6 @@ h1{
 }
 
 h2{
-  font-family:'Courier New', sans-serif;
   letter-spacing: 2.5px;
   font-weight: 100;
   font-size: 3rem;
@@ -23,14 +22,13 @@ h2{
 }
 
 h3{
-  font-family:'Courier New', sans-serif;
   letter-spacing: 2px;
   font-weight: 300;
   text-align: center;
 }
 
 body{
-  font-family: 'Titillium Web', sans-serif;
+  font-family:'Courier New', sans-serif;
   line-height: 1.4;
   background-color:#212529;
   color: #fff;
@@ -45,23 +43,29 @@ main{
   display: inline-block;
 }
 
-a{
-  color: #fff;
+a, a:hover{
+  color: #fc9403;
   text-decoration: none;
-  cursor: pointer;
 }
 
 button{
-  color: #fff;
+  color: #fc9403;
   text-decoration: none;
   cursor: pointer;
   background: transparent;
-  border: none;
-  font-family:'Courier New', sans-serif;
+  border-radius: 25px;
   letter-spacing: 2px;
-  font-weight: 300;
-  text-align: center;
   font-size: 1.5rem;
+  padding: 10px 30px;
+  margin: 30px 42vw;
+  transition-duration: 0.7s;
+}
+
+button:hover{
+  background-color: #fc9403;
+  color: #fff;
+  transition-duration: 0.7s;
+  border: #fc9403;
 }
 
 .jumbotron-container{
@@ -70,6 +74,7 @@ button{
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
+  text-align: center;
 }
 
 .avatar{
@@ -84,28 +89,9 @@ button{
   font-size: 2.5vh;
 }
 
-@media(max-width:768px){
-  .toolbar_navigation_items
-  { 
-    display: none;
-  }
-  footer .links{
-    display: none;
-  }
-
-  .information-collection h1{
-    display:none;
-  } 
-}
-
-@media(min-width:769px){
-  .toolbar_toggle_button{
-    display: none;
-  }
-
-  .toolbar_logo{
-    margin-left: 0rem;
-  }
+marquee{
+  padding: 30px;
+  width: 50%
 }
 
 ::-webkit-scrollbar { 
