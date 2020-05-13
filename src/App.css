@@ -66,10 +66,10 @@ button:hover{
 
 .jumbotron-container{
   background-image: url(./Media/Jumbotron/Background.jpg);
+  height: 100vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100%;
   text-align: center;
 }
 
