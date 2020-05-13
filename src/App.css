@@ -32,14 +32,10 @@ body{
   line-height: 1.4;
   background-color:#212529;
   color: #fff;
-  height: 100vh;
-  width:100vw;
+  height: 100%;
 }
 
 main{
-  min-height: 100vh;
-  height: 100vh !important;
-  width: 100vw !important;
   display: inline-block;
 }
 
@@ -53,7 +49,6 @@ button{
   background-color: #fff;
   text-decoration: none;
   cursor: pointer;
-  background: transparent;
   border-radius: 25px;
   letter-spacing: 2px;
   font-size: 1.5rem;
@@ -74,7 +69,7 @@ button:hover{
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 100%;
   text-align: center;
 }
 
@@ -86,7 +81,7 @@ button:hover{
 }
 
 .information-collection{
-  padding: 15vh 0;
+  padding: 12vh 0;
   font-size: 2.5vh;
 }
 
