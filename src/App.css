@@ -31,7 +31,7 @@ body{
   font-family:'Courier New', sans-serif;
   line-height: 1.4;
   background-color:#212529;
-  color: #000;
+  color: #fff;
   height: 100%;
 }
 
@@ -46,7 +46,7 @@ a, a:hover{
 
 button{
   color: #fc9403;
-  background-color: #fff;
+  background-color: #000;
   text-decoration: none;
   cursor: pointer;
   border-radius: 25px;
@@ -55,13 +55,14 @@ button{
   padding: 10px 30px;
   margin: 30px 42vw;
   transition-duration: 0.7s;
+  
 }
 
 button:hover{
   background-color: #fc9403;
   color: #000;
   transition-duration: 0.7s;
-  border: #fc9403;
+
 }
 
 .jumbotron-container{
