@@ -31,7 +31,7 @@ body{
   font-family:'Courier New', sans-serif;
   line-height: 1.4;
   background-color:#212529;
-  color: #fff;
+  color: #000;
   height: 100%;
 }
 
@@ -59,13 +59,12 @@ button{
 
 button:hover{
   background-color: #fc9403;
-  color: #fff;
+  color: #000;
   transition-duration: 0.7s;
   border: #fc9403;
 }
 
 .jumbotron-container{
-  background-image: url(./Media/Jumbotron/Background.jpg);
   height: 100vh;
   background-position: center;
   background-size: cover;
